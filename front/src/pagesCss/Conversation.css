@@ -1,0 +1,101 @@
+
+
+.userConBar {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.personImage {
+    margin-top: 20px;
+    height: 10rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.personImage h4 {
+    background-color: white;
+}
+
+.chat {
+    background-color: #4d4d4d;
+    max-height: 200px;
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
+    max-width: 80%;
+    padding: 15px;
+    overflow: auto;
+}
+
+.senderMessage {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.senderMessage {
+    margin-top: 10px;
+}
+
+.senderMessage p {
+    word-wrap: break-word
+}
+
+.senderMessage .senderName {
+    font-family: "Book Antiqua", serif;
+    font-weight: 450;
+    font-size: 19px;
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+@media (max-width: 550px) {
+
+    .m-block {
+        display: block;
+    }
+
+    .m-d-none {
+        display: none;
+    }
+
+    .personImage {
+        height: 5rem;
+        width: 7rem;
+    }
+
+    .chat {
+        background-color: #ababab;
+        max-height: 100px;
+        min-height: 100px;
+        height: 100%;
+        width: 100%;
+        max-width: 80%;
+        padding: 15px;
+        overflow: auto;
+    }
+
+    .senderMessage .senderName {
+        font-size: 11px;
+    }
+
+    .senderMessage p{
+        font-size: 10px;
+        max-width: 100px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+}

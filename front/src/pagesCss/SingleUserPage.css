@@ -1,0 +1,127 @@
+
+.container {
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    letter-spacing: 1px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.msg-header-img {
+    box-sizing: border-box;
+    padding: 5px;
+    max-height: 170px;
+    height: 75%;
+    width: 25%;
+    margin-left: 30px;
+}
+
+.msg-header-img img {
+    max-height: 200px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.inner-box {
+    overflow-y: auto;
+    background-color: white;
+    word-wrap: break-word;
+    border-radius: 0 5% 0 0;
+    padding: 10px 60px;
+}
+
+.active {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.text-input {
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 10px 5px 12px;
+    margin-left: 15px;
+}
+
+.btnBg {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    width: 100px;
+    padding: 15px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.btnBg:hover {
+    transform: scale(1.1);
+}
+
+.userImage {
+    padding: 4px;
+    text-align: center;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    margin: 6px;
+}
+
+.userImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.message {
+    padding: 8px;
+    max-width: 300px;
+    border-radius: 10px 10px 0 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.navigate__SinglePage {
+    font-size: 22px;
+    font-weight: 550;
+    margin-right: 30px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+}
+
+.navigate__SinglePage:hover {
+    color: #7676f8;
+}
+
+@media (max-width: 550px) {
+
+    .navigate__SinglePage {
+        font-size: 15px;
+    }
+
+    .active {
+        font-size: 12px;
+    }
+
+    .inner-box {
+        padding: 5px 20px;
+    }
+
+    .message {
+        max-width: 150px;
+        font-size: 10px;
+    }
+
+    .text-input {
+        height: 21px;
+        width: 80%;
+    }
+
+    .btnBg {
+        padding: 10px;
+        width: 90%;
+    }
+}

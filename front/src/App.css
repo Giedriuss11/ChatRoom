@@ -1,0 +1,62 @@
+
+.d-flex {
+    display: flex;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-btw {
+    justify-content: space-between;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.flex {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.flex3 {
+    flex: 3;
+}
+
+.flex4 {
+    flex: 4;
+}
+
+.flex6 {
+    flex: 6;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.b-box {
+    box-sizing: border-box;
+}
+
+
