@@ -1,11 +1,16 @@
 import React, {useRef, useState} from 'react';
-import Auth from "../pagesCss/Auth.css"
+import "../pagesCss/Auth.css"
 import {useNavigate} from "react-router-dom";
 import http from "../plugins/http";
+import { RiEyeCloseFill } from 'react-icons/ri';
+import {LuEye} from "react-icons/lu"
+
 
 const Register = () => {
     const nav = useNavigate()
     const [error, setError] = useState("")
+    const [showPasswordOne, setShowPasswordOne] = useState(false);
+    const [showPasswordTwo, setShowPasswordTwo] = useState(false);
     const usernameRef = useRef()
     const passwordRef = useRef()
     const passwordTwoRef = useRef()
@@ -47,6 +52,14 @@ const Register = () => {
         }
     }
 
+    const handleTogglePasswordPassOne = () => {
+        setShowPasswordOne(!showPasswordOne);
+      };
+
+      const handleTogglePasswordPassTwo = () => {
+        setShowPasswordTwo(!showPasswordTwo);
+      };
+
     return (
         <div className="authPage">
             <div className="platform">
@@ -56,8 +69,26 @@ const Register = () => {
                     <div className="d-flex a-center column">
                         <input id="myInput" ref={imageRef} type="text" placeholder="Image"/>
                         <input id="myInput" ref={usernameRef} type="text" placeholder="Username"/>
-                        <input id="myInput" ref={passwordRef} type="text" placeholder="Password"/>
-                        <input id="myInput" ref={passwordTwoRef} type="text" placeholder="Password"/>
+                        <div className='d-flex' style={{width: "93%"}}>
+                           <input className='flex4' id="myInput" ref={passwordRef} type={showPasswordOne ? "text" : "password"} placeholder="Password"/>
+                           <div className='iconShow d-flex j-center a-center' 
+                           style={{marginLeft: "10px",
+                           marginTop: "15px",
+                           }}>
+                             {showPasswordOne && <LuEye onClick={handleTogglePasswordPassOne} style={{ fontSize: "1.5rem"}} />}
+                            {!showPasswordOne && <RiEyeCloseFill onClick={handleTogglePasswordPassOne} style={{ fontSize: "1.5rem" }} />}
+                           </div>
+                        </div>
+                        <div className='d-flex' style={{width: "93%"}}>
+                           <input className='flex4' id="myInput" ref={passwordRef} type={showPasswordTwo ? "text" : "password"} placeholder="Password"/>
+                           <div className='iconShow d-flex j-center a-center' 
+                           style={{marginLeft: "10px",
+                           marginTop: "15px",
+                           }}>
+                             {showPasswordTwo && <LuEye onClick={handleTogglePasswordPassTwo} style={{ fontSize: "1.5rem"}} />}
+                            {!showPasswordTwo && <RiEyeCloseFill onClick={handleTogglePasswordPassTwo} style={{ fontSize: "1.5rem" }} />}
+                           </div>
+                        </div>
                         <button onClick={authentication}>Register</button>
                     </div>
                 </div>

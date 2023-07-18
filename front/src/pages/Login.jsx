@@ -4,10 +4,13 @@ import {useNavigate} from "react-router-dom";
 import http from "../plugins/http";
 import {useDispatch} from "react-redux";
 import {setUser} from "../features/userReducer"
+import { RiEyeCloseFill } from 'react-icons/ri';
+import {LuEye} from "react-icons/lu"
 
 const Login = ({socket}) => {
     const nav = useNavigate()
     const [error, setError] = useState("")
+    const [showPassword, setShowPassword] = useState(false);
     const usernameRef = useRef()
     const passwordRef = useRef()
     const dispatch = useDispatch()
@@ -38,6 +41,10 @@ const Login = ({socket}) => {
         }
     }
 
+    const handleTogglePassword = () => {
+        setShowPassword(!showPassword);
+      };
+
     return (
         <div className="authPage">
             <div className="platform">
@@ -46,7 +53,17 @@ const Login = ({socket}) => {
                 <div className="autoBord">
                     <div className="d-flex a-center column">
                         <input id="myInput" ref={usernameRef} type="text" placeholder="Username"/>
-                        <input id="myInput" ref={passwordRef} type="text" placeholder="Password"/>
+                        <div className='d-flex' style={{width: "93%"}}>
+                           <input className='flex4' id="myInput" ref={passwordRef} type={showPassword ? "text" : "password"} placeholder="Password"/>
+                           <div className='iconShow d-flex j-center a-center' 
+                           style={{marginLeft: "10px",
+                           marginTop: "15px",
+                           }}>
+                             {showPassword && <LuEye onClick={handleTogglePassword} style={{ fontSize: "1.5rem"}} />}
+                            {!showPassword && <RiEyeCloseFill onClick={handleTogglePassword} style={{ fontSize: "1.5rem" }} />}
+                           </div>
+                        </div>
+                        
                         <button onClick={authentication}>LOG IN</button>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ import Conversations from "./pages/Conversations";
 import SingleUserPage from "./components/SingleUserPage";
 import Notification from "./pages/Notification";
 import Chat from "./components/Chat";
+import FrontPage from './pages/FrontPage';
 
 import http from "./plugins/http";
 
@@ -22,6 +23,7 @@ import {setConversation, setPersonalMessage,
     setNotification, setGroupMessage,
     setDeleteMessagesCon, setDeleteMessagesPerAndGroup
 } from "./features/chatReducer";
+
 
 
 const socket = io("http://localhost:4002")
@@ -56,10 +58,6 @@ function App() {
         })
     }, [])
     useEffect(() => {
-        if (window.location.pathname === "/") {
-            window.location.href = "/login";
-        }
-
         async function fetchData() {
             if (token) {
                 const res = await http.postWithToken("autoLogin", {ok: "ok"})
@@ -79,6 +77,7 @@ function App() {
     return (
         <div>
             <Routes>
+                <Route path='/' element={<FrontPage/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login socket={socket}/>}/>
                 <Route path="/profile" element={<Profile socket={socket}/>}/>
