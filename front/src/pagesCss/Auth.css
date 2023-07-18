@@ -169,6 +169,10 @@
     font-weight: 300;
 }
 
+.iconShow {
+    font-size: 1.5rem;
+}
+
 @media (max-width: 550px) {
 
     .platform .login {

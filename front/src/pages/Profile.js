@@ -133,9 +133,9 @@ const Profile = ({socket}) => {
                                     <div className="error1">{error1}</div>
                                     <h3 className="m-d-none">Change password</h3>
                                     <div className="m-block d-none">Change password</div>
-                                    <input ref={oldPasswordRef} type="text" placeholder="Old password"/>
-                                    <input ref={passwordRef} type="text" placeholder="New password"/>
-                                    <input ref={passwordTwoRef} type="text" placeholder="New password"/>
+                                    <input ref={oldPasswordRef} type="password" placeholder="Old password"/>
+                                    <input ref={passwordRef} type="password" placeholder="New password"/>
+                                    <input ref={passwordTwoRef} type="password" placeholder="New password"/>
                                     <button style={{marginTop: "10px"}} className="button" onClick={() => changes(false)}>Change</button>
                                 </div>
                                 <div style={{marginTop: "20px"}} className="changeImage">

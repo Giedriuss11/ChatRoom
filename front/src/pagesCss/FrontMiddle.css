@@ -1,0 +1,95 @@
+.front-wrapper {
+    color: white;
+    position: relative;
+    padding-bottom: 2rem;
+    background-color: var(--black);
+}
+
+.front-container {
+    justify-content: space-around;
+}
+
+/* left side */
+
+.left {
+    gap: 3rem;
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+}
+
+.title>h1 {
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4rem;
+}
+
+.orange-circle {
+    height: 4rem;
+    width: 4rem;
+    background: var(--orange-gradient);
+    border-radius: 100%;
+    position: absolute;
+    right: -1%;
+    top: -20%;
+    z-index: -1;
+}
+/* right side */
+
+.right {
+    position: relative;
+    box-sizing: border-box;
+    height: 30rem;
+    width: 30rem;
+}
+
+.image-container1,
+.image-container2,
+.image-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+
+.image-container1 {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: 3;
+}
+
+.image-container2 {
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    z-index: 1;
+}
+
+.image-container3 {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    z-index: 2;
+}
+
+.left {
+    gap: 3rem;
+}
+
+.left .title {
+    position: relative;
+    z-index: 1;
+}
+
+.left .title>h1 {
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4rem;
+}
